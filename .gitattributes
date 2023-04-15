@@ -1,0 +1,2 @@
+guess_word/examples/words.txt text eol=crlf
+guess_word/src/words.txt text eol=crlf
