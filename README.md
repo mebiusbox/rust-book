@@ -19,3 +19,9 @@
 - [SE Book (翔泳社)](https://www.shoeisha.co.jp/book/detail/9784798177236)
 - [Amazon](https://www.amazon.co.jp/dp/B0BWR1T5QK)
 
+
+## Notes
+
+- 2023-12-12: 1.74.1 で動作確認済み
+- 2023-04-24: 1.69 で動作確認済み
+- 2023-04-16: 1.68 で動作確認済み
