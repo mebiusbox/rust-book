@@ -18,7 +18,8 @@ pub fn draw_in_window(backup_filename: &str, pixels: RgbImage) ->
     .unwrap_or_else(|e| panic!("{}", e));
 
     // Limit to max ~30 fps update here
-    window.limit_update_rate(Some(std::time::Duration::from_micros(16600 * 2)));
+    // window.limit_update_rate(Some(std::time::Duration::from_micros(16600 * 2)));
+    window.set_target_fps(30); // limit_update_rate は非推奨になりました (2025/05/27)
 
     for (i, (_, _, pixel)) in buffer.iter_mut().zip(pixels.enumerate_pixels()) {
         *i = u32::from_be_bytes([0, pixel[0], pixel[1], pixel[2]]);

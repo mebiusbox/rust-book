@@ -1,0 +1,50 @@
+[config]
+skip_core_tasks = true
+
+[tasks.build]
+command = "cargo"
+args = [
+    "build"
+]
+
+[tasks.build-examples]
+command = "cargo"
+args = [
+    "build"
+]
+
+[tasks.dev]
+command = "cargo"
+args = [
+    "run"
+]
+
+[tasks.dev-example]
+command = "cargo"
+args = [
+    "run",
+    "--example",
+    "${@}"
+]
+
+[tasks.run]
+command = "cargo"
+args = [
+    "run",
+    "--release"
+]
+
+[tasks.run-example]
+command = "cargo"
+args = [
+    "run",
+    "--release",
+    "--example",
+    "${@}"
+]
+
+[tasks.default]
+description = "Lists all known steps"
+cwd = "CARGO_MAKE_CURRENT_TASK_INITIAL_MAKEFILE_DIRECTORY"
+command = "makers"
+args = ["--list-all-steps"]
